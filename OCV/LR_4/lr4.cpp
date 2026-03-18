@@ -78,7 +78,6 @@ long long factorial(int n) {
 }
 
 int main() {
-    setlocale(LC_ALL, "rus");  // still needed for console output on Windows, can be removed if not required
 
     ThreadPool pool(4);
     std::vector<std::future<long long>> results;
