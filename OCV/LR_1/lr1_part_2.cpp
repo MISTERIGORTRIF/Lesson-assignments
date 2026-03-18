@@ -18,7 +18,7 @@ int main() {
     thread t1(printer, 200);
     thread t2(printer, 800);
     for (int i = 0; i < 5; ++i) {
-        cout << "Работает основной поток: " << i + 1 << endl;
+        cout << "Main Thread running: " << i + 1 << endl;
         this_thread::sleep_for(chrono::milliseconds(150));
     }
 

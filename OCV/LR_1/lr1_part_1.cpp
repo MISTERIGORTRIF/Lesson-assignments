@@ -4,7 +4,7 @@
 using namespace std;
 void printnum(int n) {
     for (size_t i = 0; i < 6; i++) {
-        cout << "поток: " << n << " " << i << "\n";
+        cout << "Thread: " << n << " " << i << "\n";
         this_thread::sleep_for(std::chrono::milliseconds(300));
     }
 }
@@ -14,7 +14,7 @@ int main() {
     thread t1(printnum, 1);
     thread t2(printnum, 2);
     for (size_t i = 0; i < 6; i++) {
-        cout << " основной" << " " << i << "\n";
+        cout << " main" << " " << i << "\n";
         this_thread::sleep_for(std::chrono::milliseconds(400));
     }
     t1.join();
